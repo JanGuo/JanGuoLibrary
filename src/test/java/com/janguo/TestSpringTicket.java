@@ -36,7 +36,7 @@ public class TestSpringTicket {
     @Test
     public void TestTicketById(){
 
-        Ticket ticket = ticketDao.selectByUserId(1);
+        Ticket ticket = ticketDao.selectByUserId(4);
         System.out.println(ticket);
     }
     @Test
@@ -54,5 +54,11 @@ public class TestSpringTicket {
     public void TestDeleteTicketByT(){
 
         ticketDao.deleteTicket("不错");
+    }
+
+    @Test
+    public void TestTicketByUId(){
+
+        System.out.println(ticketDao.selectByUserUId(2));
     }
 }

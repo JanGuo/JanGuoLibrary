@@ -1,6 +1,5 @@
 package com.janguo.janguolibrary.model.exceptions;
 
-import com.janguo.janguolibrary.model.Book;
 
 public class BookException extends RuntimeException{
     public BookException(){

@@ -42,13 +42,17 @@ public class BookController {
     public  List<Book> getAllBook(){
         List<Book> books = bookService.getAll();
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println(books);
         return books;
     }
 
 
-//    @ResponseBody
-
+    @ResponseBody
     @RequestMapping(value = "/getbook",params = "name",method = RequestMethod.GET)
     public Book getBookByName(String name){
         Book book = bookService.getBook(name);
