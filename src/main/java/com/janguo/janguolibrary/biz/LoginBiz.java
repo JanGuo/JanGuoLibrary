@@ -39,8 +39,8 @@ public class LoginBiz {
             ticketService.deleteTickedByTId(ticket.getId());
         }
 
-        ticket = TicketUtils.next(user.getId());
-        ticketService.addTicket(ticket);
+//        ticket = TicketUtils.next(user.getId());
+//        ticketService.addTicket(ticket);
         return ticket.getTicket();
     }
 

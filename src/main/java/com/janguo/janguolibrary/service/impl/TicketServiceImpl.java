@@ -29,7 +29,7 @@ public class TicketServiceImpl implements TicketService {
 
     @Override
     public Ticket getTicketById(int id) {
-        return ticketDao.selectByTId(id);
+        return ticketDao.selectByUserUId(id);
     }
 
     @Override
