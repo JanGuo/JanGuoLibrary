@@ -3,6 +3,8 @@ package com.janguo.janguolibrary.model;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class Ticket {
 
@@ -19,5 +21,5 @@ public class Ticket {
     /**
      * 过期时间
      */
-    private String expiredAt;
+    private Date expiredAt;
 }

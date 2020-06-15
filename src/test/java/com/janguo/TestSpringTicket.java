@@ -5,6 +5,7 @@ import com.janguo.janguolibrary.dao.TicketDao;
 import com.janguo.janguolibrary.dao.UserDao;
 import com.janguo.janguolibrary.model.Ticket;
 import com.janguo.janguolibrary.model.User;
+import com.janguo.janguolibrary.utils.TicketUtils;
 import org.joda.time.DateTime;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +31,19 @@ public class TestSpringTicket {
         calendar.setTime(new Date());
         ticket.setUserId(1);
         ticket.setTicket("不错");
-        ticket.setExpiredAt(calendar.toString());
+//        ticket.setExpiredAt(calendar.toString());
         ticketDao.addTicket(ticket);
     }
     @Test
+    public void TestTicket1(){
+        Ticket ticket = TicketUtils.next(4);
+        ticketDao.addTicket(ticket);
+    }
+
+    @Test
     public void TestTicketById(){
 
-        Ticket ticket = ticketDao.selectByUserId(4);
+        Ticket ticket = ticketDao.selectByTId(4);
         System.out.println(ticket);
     }
     @Test
