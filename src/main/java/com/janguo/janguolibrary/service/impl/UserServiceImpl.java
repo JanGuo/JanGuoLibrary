@@ -12,7 +12,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDao userDao;
     @Override
-    public int addUser(User user) {
+    public boolean addUser(User user) {
         return userDao.addUser(user);
     }
 

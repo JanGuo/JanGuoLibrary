@@ -4,7 +4,7 @@ import com.janguo.janguolibrary.model.User;
 
 public interface UserService {
 
-    int addUser(User user);
+    boolean addUser(User user);
 
     User getUserByEmail(String email);
 

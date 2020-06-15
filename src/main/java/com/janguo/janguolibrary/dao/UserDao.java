@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Update;
 public interface UserDao {
 
     @Insert({"insert into user (name,email,password) values (#{name},#{email},#{password})"})
-    int addUser(User user);
+    boolean addUser(User user);
 
     @Select("select * from user where id = #{id}")
     User getUserById(int id);

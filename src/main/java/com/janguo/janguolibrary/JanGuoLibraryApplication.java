@@ -3,9 +3,19 @@ package com.janguo.janguolibrary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class JanGuoLibraryApplication {
+@ServletComponentScan
+public class JanGuoLibraryApplication extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(JanGuoLibraryApplication.class);
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(JanGuoLibraryApplication.class,args);
     }
