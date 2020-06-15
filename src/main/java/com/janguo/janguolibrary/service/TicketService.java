@@ -7,5 +7,13 @@ public interface TicketService {
 
     Ticket getTicket(Ticket t);
 
+    Ticket getTicketByUserId(int uid);
 
+    Ticket getTicketById(int id);
+
+    Ticket getTicketByT(String t);
+
+    boolean deleteTickedByTId(int tid);
+
+    boolean deleteTickedByT(String t);
 }

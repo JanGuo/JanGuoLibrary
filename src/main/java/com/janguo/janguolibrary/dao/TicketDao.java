@@ -18,7 +18,7 @@ public interface TicketDao {
                     @Result(property = "ticket", column = "ticket"),
                     @Result(property = "expiredAt", column = "expired_at")
             })
-    Ticket selectByUserId(int id);
+    Ticket selectByTId(int tid);
 
     @Select("Select * from ticket where user_id = #{uid}")
     @ResultMap(value = "TicketMap")
@@ -28,8 +28,8 @@ public interface TicketDao {
     Ticket selectByTicket(String t);
 
     @Delete("delete from ticket where id = #{tid}")
-    void deleteTicketById(int tid);
+    boolean deleteTicketById(int tid);
 
     @Delete("delete from ticket where ticket = #{t}")
-    void deleteTicket(String t);
+    boolean deleteTicket(String t);
 }

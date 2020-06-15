@@ -48,7 +48,7 @@ public class TestSpringTicket {
     @Test
     public void TestDeleteTicketById(){
 
-        ticketDao.deleteTicketById(1);
+        System.out.println(ticketDao.deleteTicketById(4));
     }
     @Test
     public void TestDeleteTicketByT(){
